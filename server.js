@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://transatcruise:Crossing@ds153732.mlab.com:53732/heroku_5pcckfzc";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_5pcckfzc:pufce00fhpcfub2meqa6ap566s@ds153732.mlab.com:53732/heroku_5pcckfzc"
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
