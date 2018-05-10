@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class PrincessCruises extends Component {
+class HollandAmericaCruises extends Component {
   state = {
     cruises: [],
     name: " ",
@@ -16,11 +16,11 @@ class PrincessCruises extends Component {
   };
 
   componentDidMount() {
-    this.loadPrincessCruises();
+    this.loadHollandAmericaCruises();
   }
 
-  loadPrincessCruises = () => {
-    API.getPrincessCruises()
+  loadHollandAmericaCruises = () => {
+    API.getHollandAmericaCruises()
       .then(res =>
         this.setState({ cruises: res.data, name: res.data.name, price: res.data.price, date: res.data.date })
       )
@@ -59,7 +59,7 @@ class PrincessCruises extends Component {
         <Row>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Cunard Cruises</h1>
+              <h1>Holland-America Cruises</h1>
               <h3>Name: {this.state.name}</h3>
               <h3>Prices: {this.state.price}</h3>
               <h4>Date: {this.state.date}</h4>
@@ -72,4 +72,4 @@ class PrincessCruises extends Component {
   }
 }
 
-export default PrincessCruises;
+export default HollandAmericaCruises;

@@ -24,12 +24,12 @@ class PortfolioContainer extends Component {
   renderPage = () => {
     if(this.state.currentPage === "Home"){
       return <Home />
-    }
-    else if(this.state.currentPage === "About"){
-      return<About />
-    }
-    else if(this.state.currentPage === "Blog"){
-      return<Blog />
+    // }
+    // else if(this.state.currentPage === "About"){
+    //   return<About />
+    // }
+    // else if(this.state.currentPage === "Blog"){
+    //   return<Blog />
     }
     else if(this.state.currentPage === "Cunard Line"){
       return<CunardCruises />

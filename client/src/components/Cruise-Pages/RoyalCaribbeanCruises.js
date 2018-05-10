@@ -59,7 +59,7 @@ class RoyalCaribbeanCruises extends Component {
         <Row>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Cunard Cruises</h1>
+              <h1>Royal Caribbean Cruises</h1>
               <h3>Name: {this.state.name}</h3>
               <h3>Prices: {this.state.price}</h3>
               <h4>Date: {this.state.date}</h4>

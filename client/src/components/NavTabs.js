@@ -7,7 +7,7 @@ const NavTabs = props => (
         Home
       </a>
     </li>
-    <li className="nav-item">
+    {/* <li className="nav-item">
       <a onClick={() => props.handlePageChange("About")} className="nav-link">
         About
       </a>
@@ -21,7 +21,7 @@ const NavTabs = props => (
       <a onClick={() => props.handlePageChange("Contact")} className="nav-link">
         Contact
       </a>
-    </li>
+    </li> */}
     <li className="nav-item">
       <a onClick={() => props.handlePageChange("Cunard Line")} className="nav-link">
         Cunard Line
