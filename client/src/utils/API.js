@@ -16,8 +16,20 @@ import axios from "axios";
 
 export default {
   // Gets all Cruises
-  getCruises: function() {
-    return axios.get("/api/cruises");
+  getCunardCruises: function() {
+    return axios.get("/api/cunard-cruises/scrape");
+  },
+  getHollandAmericaCruises: function() {
+    return axios.get("/api/holland-america-cruises/scrape");
+  },
+  getRoyalCaribbeanCruises: function() {
+    return axios.get("/api/royal-caribbean-cruises/scrape");
+  },
+  getPrincessCruises: function() {
+    return axios.get("/api/princess-cruises/scrape");
+  },
+  getPOCruises: function() {
+    return axios.get("/api/po-cruises/scrape");
   },
   // // Gets the book with the given id
   // getBook: function(id) {

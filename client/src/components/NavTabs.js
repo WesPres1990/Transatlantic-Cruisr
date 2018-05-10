@@ -23,8 +23,28 @@ const NavTabs = props => (
       </a>
     </li>
     <li className="nav-item">
-      <a onClick={() => props.handlePageChange("Cruises")} className="nav-link">
-        Cruises
+      <a onClick={() => props.handlePageChange("Cunard Line")} className="nav-link">
+        Cunard Line
+      </a>
+    </li>
+    <li className="nav-item">
+      <a onClick={() => props.handlePageChange("Holland-America Line")} className="nav-link">
+        Holland-America Line
+      </a>
+    </li>
+    <li className="nav-item">
+      <a onClick={() => props.handlePageChange("Royal Caribbean")} className="nav-link">
+        Royal Caribbean
+      </a>
+    </li>
+    <li className="nav-item">
+      <a onClick={() => props.handlePageChange("Princess Cruises")} className="nav-link">
+        Princess Cruises
+      </a>
+    </li>
+    <li className="nav-item">
+      <a onClick={() => props.handlePageChange("P&O Cruises")} className="nav-link">
+        P&amp;O Cruises
       </a>
     </li>
   </ul>

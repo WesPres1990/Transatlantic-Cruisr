@@ -2,10 +2,15 @@ const db = require("../models");
 
 // Defining methods for the cruisesController
 module.exports = {
-  findAll: function(req, res) {
-    db.Cruise
+  findAllCunard: function(req, res) {
+    db.CunardCruise
       .find(req.query)
-      // .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findAllPrincess: function(req, res) {
+    db.PrincessCruise
+      .find(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -15,12 +20,18 @@ module.exports = {
 //       .then(dbModel => res.json(dbModel))
 //       .catch(err => res.status(422).json(err));
 //   },
-//   create: function(req, res) {
-//     db.Book
-//       .create(req.body)
-//       .then(dbModel => res.json(dbModel))
-//       .catch(err => res.status(422).json(err));
-//   },
+  createCunard: function(req, res) {
+    db.CunardCruise
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  createPrincess: function(req, res) {
+    db.PrincessCruise
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 //   update: function(req, res) {
 //     db.Book
 //       .findOneAndUpdate({ _id: req.params.id }, req.body)

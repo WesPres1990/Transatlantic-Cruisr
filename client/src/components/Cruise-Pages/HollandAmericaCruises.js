@@ -7,21 +7,22 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class Cruises extends Component {
+class PrincessCruises extends Component {
   state = {
     cruises: [],
-    price: "",
-    date: ""
+    name: " ",
+    price: " ",
+    date: " "
   };
 
   componentDidMount() {
-    this.loadCruises();
+    this.loadPrincessCruises();
   }
 
-  loadCruises = () => {
-    API.getCruises()
+  loadPrincessCruises = () => {
+    API.getPrincessCruises()
       .then(res =>
-        this.setState({ cruises: res.data, price: "", date: "" })
+        this.setState({ cruises: res.data, name: res.data.name, price: res.data.price, date: res.data.date })
       )
       .catch(err => console.log(err));
   };
@@ -59,8 +60,10 @@ class Cruises extends Component {
           <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Cunard Cruises</h1>
-              <h3>{this.state.price}</h3>
-              <h4>{this.state.date}</h4>
+              <h3>Name: {this.state.name}</h3>
+              <h3>Prices: {this.state.price}</h3>
+              <h4>Date: {this.state.date}</h4>
+              {console.log(this.state.cruises)}
             </Jumbotron>
           </Col>
         </Row>
@@ -69,4 +72,4 @@ class Cruises extends Component {
   }
 }
 
-export default Cruises;
+export default PrincessCruises;

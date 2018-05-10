@@ -14,6 +14,21 @@ const Navpills = props => (
     <li onClick={() => props.handlePageChange("Contact")} className = "new-item">
       <a className = {props.currentPage === "Contact" ? "nav-link active" : "nav-link"}>Contact</a>
     </li>
+    <li onClick={() => props.handlePageChange("Cunard Line")} className = "new-item">
+      <a className = {props.currentPage === "Cunard Line" ? "nav-link active" : "nav-link"}>Cunard Line</a>
+    </li>
+    <li onClick={() => props.handlePageChange("Holland-America Line")} className = "new-item">
+      <a className = {props.currentPage === "Holland-America Line" ? "nav-link active" : "nav-link"}>Holland-America Line</a>
+    </li>
+    <li onClick={() => props.handlePageChange("Royal Caribbean")} className = "new-item">
+      <a className = {props.currentPage === "Royal Caribbean" ? "nav-link active" : "nav-link"}>Royal Caribbean</a>
+    </li>
+    <li onClick={() => props.handlePageChange("Princess Cruises")} className = "new-item">
+      <a className = {props.currentPage === "Princess Cruises" ? "nav-link active" : "nav-link"}>Princess Cruises</a>
+    </li>
+    <li onClick={() => props.handlePageChange("P&O Cruises")} className = "new-item">
+      <a className = {props.currentPage === "P&O Cruises" ? "nav-link active" : "nav-link"}>P&amp;O Cruises</a>
+    </li>
   </ul>
 );
 
